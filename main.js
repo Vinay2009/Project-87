@@ -3,7 +3,7 @@ var canvas = new fabric.Canvas('myCanvas');
  block_y=1;
  block_x=1;
 
-block_image_width = 350;
+block_image_width = 300;
 block_image_height = 430;
 
 var block_image_object= "";
@@ -16,8 +16,8 @@ function new_image(get_image)
 		block_image_object.scaleToWidth(block_image_width);
 		block_image_object.scaleToHeight(block_image_height);
 		block_image_object.set({
-			top:player_y,
-		left:player_x
+			top:block_y,
+		left:block_x
 		});
 		canvas.add(block_image_object);
 	});
@@ -32,27 +32,32 @@ console.log(keyPressed);
 
 	if(keyPressed == '82')
 	{
+		block_x=1;
 		new_image('rr.jpg');
 		console.log("r");
 	}
 	if(keyPressed == '71')
 	{
-	  new_image('gr.png');
+		block_x=300;
+		    new_image('gr.png');
             console.log("g");
     }
 	if(keyPressed == '89')
 	{
-            new_image('yr.png');
+        block_x=500;    
+		new_image('yr.png');
             console.log("y");
     }
 	if(keyPressed == '80')
 	{
-            new_image('pr.png');
+        block_x=800;    
+		new_image('pr.png');
             console.log("p");
     }
 	if(keyPressed == '66')
 	{
-            new_image('br.png');
+        block_x=900;    
+		new_image('br.png');
             console.log("b");
     }
 	
